@@ -34,4 +34,16 @@
     align-items: start;
     gap: 10px;
   }
+
+  .catalog-page.section-catalog .catalog:nth-child(odd):last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    flex-direction: row;
+    align-items: end;
+  }
+
+  .catalog-page.section-catalog .catalog:nth-child(odd):last-child img {
+    width: 180px;
+    height: 130px;
+  }
 }
