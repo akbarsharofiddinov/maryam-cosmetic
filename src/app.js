@@ -27,7 +27,7 @@ products.forEach((product, productIndex) => {
 
         if (child.className === "order-btn") {
           child.addEventListener("click", (e) => {
-            e.stopPropagation();
+            e.preventDefault();
             child.style = "display: none";
 
             allCountBoxes[productIndex].classList.add("show");
