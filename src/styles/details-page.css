@@ -63,12 +63,16 @@
   flex-direction: column;
   gap: 10px;
   flex: 15%;
+  max-height: 525px;
+  overflow-y: auto;
 }
 
 .details-page .right.details .similar-colors .image-box {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .details-page .right.details .similar-colors .image-box.none::after {
@@ -236,4 +240,190 @@
 .section-comments .comment-box .comment {
   font-size: 16px;
   font-weight: 500;
+}
+
+.section-discounted-products .recommended-products {
+  display: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 540px) {
+  .details-page .navigation-bar {
+    display: none !important;
+  }
+
+  .details-page .product-details {
+    flex-direction: column;
+  }
+
+  .details-page .right.details {
+    flex-direction: column;
+  }
+
+  .details-page .right.details .similar-colors {
+    display: flex;
+    flex-direction: row;
+    max-width: 350px;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .details-page .right.details .similar-colors .image-box {
+    min-width: 100px;
+    max-width: 100px;
+    height: 100px;
+  }
+
+  .details-page .right.details .top {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .details-page .title {
+    font-size: 22px;
+  }
+
+  .details-page .right.details .about-product h4 {
+    font-size: 18px;
+  }
+
+  .details-page .right.details ul li {
+    font-size: 16px;
+    letter-spacing: unset;
+  }
+
+  .details-page .right.details .old-price span:first-child {
+    font-size: 16px;
+  }
+
+  .details-page .right.details .old-price .discount {
+    font-size: 12px;
+  }
+
+  .details-page .right.details .current-price {
+    font-size: 20px;
+  }
+
+  .details-page .right.details .ordering-box {
+    flex-direction: column;
+  }
+
+  .details-page .right.details .order-btn,
+  .details-page .right.details .count-box {
+    width: 100%;
+  }
+
+  /* Section comments */
+
+  .section-comments .comments {
+    overflow: auto;
+    gap: 10px;
+  }
+
+  .section-comments .comment-box {
+    min-width: 310px;
+    max-width: 310px;
+  }
+
+  .section-comments .comment-box img {
+    max-width: 40px !important;
+    max-height: 40px !important;
+  }
+
+  .section-comments .comment-box .stars svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .section-comments .comment-box .stars {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .section-comments .comment-box .date {
+    font-size: 12px;
+  }
+
+  .section-comments .comment {
+    font-size: 14px;
+  }
+
+  .section-discounted-products .swiper {
+    display: none;
+  }
+
+  .section-discounted-products .recommended-products {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .recommended-products .product-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recommended-products .product-box .img-box {
+    position: relative;
+  }
+
+  .recommended-products .img-box .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    background-color: #ffe70d;
+    padding: 3px 8px;
+    border-radius: 100px;
+  }
+
+  .recommended-products .img-box .favourite-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .recommended-products .title {
+    font-size: 14px;
+  }
+
+  .recommended-products .product-box {
+    min-height: 320px;
+    background-color: #fff;
+    padding: 5px 5px 10px 5px;
+    border-radius: 25px;
+  }
+
+  .recommended-products .product-box .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .recommended-products .product-box .body span {
+    font-size: 12px;
+    opacity: 0.5;
+  }
+
+  .recommended-products .product-box .body .price-tag .old-price {
+    text-decoration: line-through;
+    opacity: 0.5;
+    font-size: 12px;
+  }
+
+  .recommended-products .product-box .price {
+    font-size: 16px;
+  }
+
+  .recommended-products .product-box .order-btn {
+    padding: 6px 12px;
+    width: 100%;
+    margin-top: 10px;
+  }
 }
